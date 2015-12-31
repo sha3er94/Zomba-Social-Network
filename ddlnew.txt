@@ -1,0 +1,81 @@
+drop database user;
+create database user;
+use user;
+create table register
+(
+ fname varchar(255) not null,
+ lname varchar(255) not null,
+ password varchar(255) not null,
+ email varchar(255) unique not null,
+ phone varchar(255),
+ gender varchar(255) not null,
+ birthdate date not null,
+ hometown varchar(255),
+ status varchar(255),
+ aboutme text(400),
+ profpic longblob,
+ primary key(email)
+);
+
+
+create table friends
+(
+sender varchar(255),
+receiver varchar(255),
+primary key(sender,receiver)
+);
+create table search
+(
+email varchar(255),
+id int(100)
+);
+create table relation
+(
+email varchar(255),
+email1 varchar(255),
+primary key (email,email1)
+);
+
+create table post
+(
+id int(10) AUTO_INCREMENT,
+caption TEXT (500),
+email VARCHAR(255),
+name VARCHAR(255),
+likes int (10),
+privacy int(1),
+time TIMESTAMP,
+image longblob,
+PRIMARY key (id)   
+);
+CREATE TABLE likes
+    (
+    id int (10),
+    email varchar (255),
+    PRIMARY KEY(id,email)
+    );
+create table likeid
+(
+idp int(100),
+id int(100)    
+);
+create table notifications
+(
+sender varchar(255),
+receiver varchar(255),
+time TIMESTAMP,
+notification text(400),
+seen int(1),
+primary key(sender,receiver,time)
+);
+ALTER TABLE   likes  ADD FOREIGN KEY( id ) REFERENCES post(id);
+ALTER TABLE   likes  ADD FOREIGN KEY( email ) REFERENCES register( email);
+ALTER TABLE   post  ADD FOREIGN KEY( email ) REFERENCES register( email);
+ALTER TABLE   relation  ADD FOREIGN KEY( email ) REFERENCES register( email);
+ALTER TABLE   relation  ADD FOREIGN KEY( email1 ) REFERENCES register( email);
+ALTER TABLE   search  ADD FOREIGN KEY( email ) REFERENCES register( email);
+ALTER TABLE   friends  ADD FOREIGN KEY( sender ) REFERENCES register( email);
+ALTER TABLE   friends  ADD FOREIGN KEY( receiver ) REFERENCES register( email);
+ALTER TABLE   likeid  ADD FOREIGN KEY( idp ) REFERENCES post( id);
+ALTER TABLE   notifications  ADD FOREIGN KEY( receiver ) REFERENCES register( email);
+ALTER TABLE   notifications  ADD FOREIGN KEY( sender ) REFERENCES register( email);

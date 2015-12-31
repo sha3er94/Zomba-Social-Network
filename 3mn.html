@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>El 3M'S w nourhan</title>
+    <link rel="stylesheet" type="text/css" href="mn.css" media="all" />
+
+<style>
+body {
+    font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+	background:url(images/mai.jpg);
+	font-weight: 400;
+	font-size: 15px;
+	color: #3a2127;
+	overflow-y: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1350px 850px;
+}
+/*.animate-area { 
+  background-image: url(g.png), url(g1.png), url(images.png);
+  background-position: 20px -90px, 30px 80px, 0px 0px;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+}
+
+@keyframes animatedBird {
+  from { background-position: 20px 20px, 30px 80px, 0 0; }
+  to { background-position: 300px -90px, 30px 20px, 100% 0; }
+}
+    
+.animate-area { 
+  animation: animatedBird 4s linear infinite;
+}
+
+*/
+
+@keyframes tutsFade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+p {
+
+  animation-name: tutsFade;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  text-align: left;
+  font-size: 30px;
+  font-family: fantasy;
+  color:#000066;
+  margin-top: 40px;
+  margin-left: 0px;
+  border : 1px solid black;
+  border-radius: 1px;
+  padding: 10px 10px 10px ;
+  padding-right: -100px;
+  width : fit-content;
+  width:-webkit-fit-content; 
+  width:-moz-fit-content;
+  border-width: 5px;
+  border-color: #000066;
+  float: center;
+  border-collapse: collapse;
+  
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 10040
+  }
+}
+
+
+@keyframes slide {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 40%;
+    width: 10040
+  }
+}
+
+h1 {
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  font-size: 30px;
+  font-family: fantasy;
+  color:#000066;
+}
+
+
+h2 {
+  animation-duration: 3s;
+  animation-name: slide;
+  margin-left: 40%;
+  font-size: 30px;
+  font-family: fantasy;
+  color:#FF6666;
+}
+
+.may {
+ margin-left: 20%;
+ margin-top: 305px;
+ font-style: italic;
+ color :#0066cc;
+ display: inline-block;
+
+}
+
+.may input.buttom {
+   background: #FF6666; display: inline-block; padding: 20px 20px 20px; color: #fbf7f7; text-decoration: none; font-weight: bold; line-height: 1; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 1px 3px #999; -webkit-box-shadow: 0 1px 3px #999; box-shadow: 0 1px 3px #999; text-shadow: 0 -1px 1px #222; border: none; position: relative; cursor: pointer; font-size: 14px; font-family:Verdana, Geneva, sans-serif;
+ }
+
+.may input.buttom:hover { 
+ background-color: #006699;
+ display: inline-block;
+ }
+
+
+ .mayar {
+ margin-left: 65.5%;
+ margin-top: -55px;
+ font-style: italic;
+ color :#0066cc;
+
+}
+
+.mayar input.buttom {
+   background: #FF6666; display: inline-block; padding: 20px 20px 20px; color: #fbf7f7; text-decoration: none; font-weight: bold; line-height: 1; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 1px 3px #999; -webkit-box-shadow: 0 1px 3px #999; box-shadow: 0 1px 3px #999; text-shadow: 0 -1px 1px #222; border: none; position: relative; cursor: pointer; font-size: 14px; font-family:Verdana, Geneva, sans-serif;
+ }
+
+.mayar input.buttom:hover { 
+ background-color: #006699;
+ }
+
+</style>
+</head>
+
+<body>
+<!--<h1><strong>Welcome to our Page</strong></h1>-->
+<h2><strong>Welcome to Zomba</strong></h2>
+<div class="arrow bounce">
+</div>
+<div class="may">
+<form action="index.html">
+            <input class="buttom" name="submit" id="submit" tabindex="12" value="Registration From Here" type="submit">   
+
+</form>
+</div>
+<!--<p><strong>If You Already have an Account</strong></p>-->
+<div class="nourhan bounce">
+</div>
+<div class="mayar">
+<form action="login.php">
+            <input class="buttom" name="submit" id="submit" tabindex="12" value="Login From Here" type="submit">   
+            
+</form>
+</div>
+</div>
+</body>
+</html>
